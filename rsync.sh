@@ -8,8 +8,8 @@
 #
 #
 
-SERVER=harniman.net
-USER=harniman
+SERVER=
+USER=
 DATA='/data'
 TARGET='~/work'
 timestamp=`date +"%Y-%m-%d-%H_%M_%S"`
