@@ -8,4 +8,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	telnet \ 
 	tcpdump \
 	git-core \
-	vim
+	vim \
+	openssh-client \
+	rsync
+	
+ADD /rsync.sh /rsync.sh
+ADD /excludes.txt /excludes.txt
+
+	
