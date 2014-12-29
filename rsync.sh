@@ -16,7 +16,7 @@ timestamp=`date +"%Y-%m-%d-%H_%M_%S"`
 inprogress='/data/backuplog/inprogress'
 excludefile='excludes.txt'
 
-while getopts s:o opt ; do
+while getopts s:t:u: opt ; do
   case $opt in
   s)
       SERVER=$OPTARG
@@ -35,7 +35,7 @@ shift $((OPTIND - 1))
 CMD=`echo $1 | tr '[:upper:]' '[:lower:]'`
 
 function usage {
-	echo "Usage $0 -s <servername> -o cmd " \
+	echo "Usage $0 -s <target host> -t <target dir> -u <userid> " \
 	where cmd is push or pull \
 	-s is the server \
 	-t is target directory \
